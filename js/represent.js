@@ -101,7 +101,11 @@ function game_over(){
   icon.setAttribute("style", "display:none");
   result_incorrect.setAttribute("style", "display:none");
   result_correct.setAttribute("style", "display:none");
-  gameover.innerHTML = "<div><img src='images/SVG/result_" + score + ".svg' /></div>";
+  if (score == 15) {
+    gameover.innerHTML = "<div><img src='images/SVG/result_" + score + ".svg' /></div>";
+  } else {
+    gameover.innerHTML = '<div><img src="images/SVG/result_15.svg" /></div><div><img src="images/SVG/download.svg" /></div><div><img src="images/SVG/try_again.svg" /></div><div> <img src="images/SVG/facebook.svg" /><img src="images/SVG/twitter.svg" /></div>';
+  }
   gameover.setAttribute("style", "display:block");
 }
 
