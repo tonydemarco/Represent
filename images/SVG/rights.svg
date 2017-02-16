@@ -3,7 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="824px" height="450px" viewBox="0 0 824 450" enable-background="new 0 0 824 450" xml:space="preserve">
-<rect x="0" y="0" fill="#231F20" width="824" height="450"/>
+<rect x="-0.485" y="-2.954" fill="#231F20" width="824" height="125"/>
 <g id="Resultado" display="none">
 	<rect x="118.5" y="236.406" display="inline" fill="#939598" width="563" height="92.258"/>
 	<g display="inline">
@@ -15,29 +15,28 @@
 	
 		<text transform="matrix(1 0 0 1 161.2932 304.4934)" display="inline" fill="#FFFFFF" font-family="'SuitSansPro-Heavy'" font-size="60">JOGUE DE NOVO</text>
 	<path display="inline" fill="#FFFFFF" d="M66.22,402.35v-31.699l22.43-22.544h31.7l22.544,22.544v31.699l-22.544,22.431h-6.409
-		v-27.352h9.271l1.486-11.214h-10.757v-9.498l2.403-2.404h8.583v-10.872h-14.762l-7.554,7.554v15.222H93.8v11.214h8.812v27.352
-		H88.65L66.22,402.35z"/>
+		v-27.352h9.271l1.484-11.214H113.94v-9.498l2.403-2.404h8.583v-10.872h-14.762l-7.556,7.554v15.224H93.8v11.214h8.812v27.352H88.65
+		L66.22,402.35z"/>
 	<path display="inline" fill="#FFFFFF" d="M657.106,402.35v-31.699l22.43-22.544h31.7l22.544,22.544v31.699l-22.544,22.431h-31.7
-		L657.106,402.35z M701.621,411.276l17.737-17.852l0.115-10.529v-4.348l4.92-4.351l-5.607,0.345l4.007-4.921l-6.064,1.718
-		l-3.434-3.205h-8.584l-6.181,6.063v6.64h-10.983l-13.617-13.504v11.559l5.721,5.836l-6.064-1.602v3.434l8.012,8.01h-5.15
-		l6.981,6.865h4.462l-4.577,4.58h-12.131l5.265,5.262H701.621z"/>
+		L657.106,402.35z M701.619,411.276l17.737-17.852l0.115-10.529v-4.348l4.92-4.353l-5.607,0.347l4.009-4.923l-6.064,1.72
+		l-3.434-3.205h-8.584l-6.183,6.062v6.642h-10.981l-13.617-13.504v11.559l5.721,5.836l-6.064-1.602v3.434l8.014,8.01h-5.15
+		l6.981,6.865h4.462l-4.577,4.58h-12.131l5.265,5.262H701.619z"/>
 </g>
 <rect x="175.5" y="236.406" fill="#939598" width="449" height="92.258"/>
 <g>
 	<rect x="0" y="17.5" fill="none" width="800" height="337"/>
 	<text transform="matrix(1 0 0 1 210.6526 97.4993)" fill="#ED1C24" font-family="'SuitSansPro-Heavy'" font-size="100">9 rights</text>
-	<text transform="matrix(1 0 0 1 177.2522 194.4993)" fill="#939598" font-family="'SuitSansPro-Heavy'" font-size="100">6 wrongs</text>
 </g>
 <rect x="0" y="256.49" fill="none" width="800" height="82.5"/>
 <text transform="matrix(1 0 0 1 235.2717 304.4934)" fill="#FFFFFF" font-family="'SuitSansPro-Heavy'" font-size="60">TRY AGAIN</text>
-<rect x="0" y="120.184" fill="#707374" width="824" height="92.261"/>
-<text transform="matrix(1 0 0 1 119.0833 188.2732)" fill="#FFFFFF" font-family="'SuitSansPro-Heavy'" font-size="60">Download Free Font</text>
-<path fill="#FFFFFF" d="M404.185,406.601v-31.699l22.427-22.544h31.698l22.545,22.544v31.699l-22.545,22.431h-6.408V401.68h9.27
-	l1.488-11.214h-10.758v-9.498l2.402-2.404h8.584v-10.872h-14.762l-7.554,7.554v15.222h-8.812v11.214h8.812v27.352h-13.961
+<rect x="0" y="121.601" fill="#707374" width="824" height="92.26"/>
+<text transform="matrix(1 0 0 1 119.0833 189.6902)" fill="#FFFFFF" font-family="'SuitSansPro-Heavy'" font-size="60">Download Free Font</text>
+<path fill="#FFFFFF" d="M404.185,406.601v-31.699l22.427-22.544h31.698l22.545,22.544v31.699l-22.545,22.431h-6.408V401.68h9.271
+	l1.486-11.214h-10.758v-9.498l2.402-2.404h8.584v-10.872h-14.763l-7.555,7.554v15.224h-8.812v11.214h8.812v27.352H426.61
 	L404.185,406.601z"/>
 <path fill="#FFFFFF" d="M642.933,406.601v-31.699l22.43-22.544h31.7l22.544,22.544v31.699l-22.544,22.431h-31.7L642.933,406.601z
-	 M687.448,415.527l17.737-17.852l0.115-10.529v-4.348l4.92-4.351l-5.607,0.345l4.007-4.921l-6.064,1.718l-3.434-3.205h-8.584
-	l-6.181,6.063v6.64h-10.983l-13.617-13.504v11.559l5.721,5.836l-6.064-1.602v3.434l8.012,8.01h-5.15l6.981,6.865h4.462l-4.577,4.58
-	H657.01l5.265,5.262H687.448z"/>
+	 M687.448,415.527l17.737-17.852l0.115-10.529v-4.348l4.92-4.353l-5.607,0.346l4.007-4.922l-6.062,1.72l-3.436-3.205h-8.584
+	l-6.181,6.062v6.642h-10.983l-13.615-13.505v11.56l5.721,5.836l-6.064-1.602v3.434l8.014,8.01h-5.15l6.981,6.865h4.462l-4.577,4.58
+	H657.01l5.265,5.262H687.448L687.448,415.527z"/>
 <text transform="matrix(1 0 0 1 103.1926 421.3596)" fill="#FFFFFF" font-family="'SuitSansPro-Bold'" font-size="60">Share</text>
 </svg>
