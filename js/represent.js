@@ -10,6 +10,7 @@ Copyright: Felipe C. da S. Sanches <juca@members.fsf.org>
 const DELAY = 1000;
 
 var score,
+    scorediv,
     game_is_running = false,
     intro,
     icon,
@@ -18,6 +19,8 @@ var score,
     result_incorrect,
     gameover,
     current_icon,
+    download,
+    tryagain,
     random_icons,
     icon_names = [
   "agender",
@@ -44,12 +47,29 @@ function init(){
   result_correct = document.getElementById("result_correct");
   result_incorrect = document.getElementById("result_incorrect");
   gameover = document.getElementById("gameover");
+  scorediv = document.getElementById("score");
+  download = document.getElementById("download");
+  tryagain = document.getElementById("tryagain");
+
+  download.setAttribute("style", "display:none");
+  tryagain.setAttribute("style", "display:none");
 
   intro.onclick = new_game;
-  gameover.onclick = function(){
+  scorediv.onclick = function(){
     gameover.setAttribute("style", "display:none");
     intro.setAttribute("style", "display:block");
+    download.setAttribute("style", "display:none");
+    tryagain.setAttribute("style", "display:none");
   }
+  var fb = document.getElementById("facebook").onclick = function(){ window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent")};
+  var tw = document.getElementById("twitter").onclick = function () { window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent")};
+  download.onclick = function () { window.open("http://www.justintype.com/free/represent/RepresentSans-Regular.otf.zip")};
+  tryagain.onclick = function () {
+    gameover.setAttribute("style", "display:none");
+    intro.setAttribute("style", "display:block");
+    download.setAttribute("style", "display:none");
+    tryagain.setAttribute("style", "display:none");
+  };
 }
 
 function new_game(){
@@ -101,10 +121,12 @@ function game_over(){
   icon.setAttribute("style", "display:none");
   result_incorrect.setAttribute("style", "display:none");
   result_correct.setAttribute("style", "display:none");
-  if (score == 15) {
-    gameover.innerHTML = "<div><img src='images/SVG/result_" + score + ".svg' /></div>";
+  if (score != 15) {
+    scorediv.innerHTML = "<div><img src='images/SVG/result_" + score + ".svg' /></div>";
   } else {
-    gameover.innerHTML = '<div><img src="images/SVG/result_15.svg" /></div><div><img src="images/SVG/download.svg" /></div><div><img src="images/SVG/try_again.svg" /></div><div> <img src="images/SVG/facebook.svg" /><img src="images/SVG/twitter.svg" /></div>';
+    scorediv.innerHTML = '<div><img src="images/SVG/result_15.svg" />';
+    download.setAttribute("style", "display:block");
+    tryagain.setAttribute("style", "display:block");
   }
   gameover.setAttribute("style", "display:block");
 }
