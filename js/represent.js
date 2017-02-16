@@ -37,7 +37,7 @@ var score,
   "female"
 ];
 
-function init(){ 
+function init(){
   intro = document.getElementById("intro");
   icon = document.getElementById("icon");
   icon_img = document.getElementById("icon_img");
@@ -101,6 +101,7 @@ function game_over(){
   icon.setAttribute("style", "display:none");
   result_incorrect.setAttribute("style", "display:none");
   result_correct.setAttribute("style", "display:none");
+  gameover.innerHTML = "<div><img src='images/SVG/result_" + score + ".svg' /></div>";
   gameover.setAttribute("style", "display:block");
 }
 
