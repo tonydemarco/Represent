@@ -55,7 +55,7 @@ function init(){
 
   intro.onclick = new_game;
   var fb = document.getElementById("facebook").onclick = function(){ window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent")};
-  var tw = document.getElementById("twitter").onclick = function () { window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent")};
+  var tw = document.getElementById("twitter").onclick = function () { window.open("http://twitter.com/share?text=An%20Awesome%20Link&url=http://www.justintype.com/represent")};
   download.onclick = function () { window.open("http://www.justintype.com.br/free/represent/RepresentSans-Regular.otf.zip")};
   tryagain.onclick = function () {
     gameover.setAttribute("style", "display:none");
