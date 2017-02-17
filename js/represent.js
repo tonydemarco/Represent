@@ -126,8 +126,8 @@ function game_over(){
   } else {
     scorediv.innerHTML = '<div><img src="images/SVG/result_15.svg" />';
     download.setAttribute("style", "display:block");
-    tryagain.setAttribute("style", "display:block");
   }
+  tryagain.setAttribute("style", "display:block");
   gameover.setAttribute("style", "display:block");
 }
 
