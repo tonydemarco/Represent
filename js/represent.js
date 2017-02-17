@@ -177,8 +177,11 @@ function next_round(){
   if (current_icon == icon_names.length - 1){
     window.setTimeout(game_over, DELAY);
   } else {
+    // disabling the game and then re-enabling it prevents breakage due to fast clicking
+    game_is_running = false;
     display_next_icon();
     window.setTimeout(function(){
+      game_is_running = true;
       result_correct.setAttribute("style", "display:none");
       result_incorrect.setAttribute("style", "display:none");
       icon.setAttribute("style", "display:block")
