@@ -168,6 +168,9 @@ function game_over(){
     download.setAttribute("style", "display:block");
   }
   gameover.setAttribute("style", "display:block");
+
+  // reset icon
+  icon_img.setAttribute("src", "images/SVG/correct.svg");
 }
 
 function next_round(){
