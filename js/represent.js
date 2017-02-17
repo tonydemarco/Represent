@@ -27,6 +27,7 @@ var score,
     download,
     tryagain,
     random_icons,
+    share_msg,
     icon_names = [
   "agender",
   "androgynous",
@@ -64,8 +65,8 @@ function init(){
 
   guess.onclick = new_game;
   learn.onclick = start_learn;
-  var fb = document.getElementById("facebook").onclick = function(){ window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent")};
-  var tw = document.getElementById("twitter").onclick = function () { window.open("http://twitter.com/share?text=An%20Awesome%20Link&url=http://www.justintype.com/represent")};
+  var fb = document.getElementById("facebook").onclick = function(){ window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent&quote=" + share_msg)};
+  var tw = document.getElementById("twitter").onclick = function () { window.open("http://twitter.com/share?url=http://www.justintype.com/represent&text=" + share_msg)};
   download.onclick = function () { window.open("http://www.justintype.com.br/free/represent/RepresentSans-Regular.otf.zip")};
   tryagain.onclick = function () {
     gameover.setAttribute("style", "display:none");
@@ -156,6 +157,8 @@ function answer(button){
 
 function game_over(){
   game_is_running = false;
+  // message to be shared
+  share_msg = "I got " + score + " out of 15! How many symbols can you name?"
 
   icon.setAttribute("style", "display:none");
   buttons.setAttribute("style", "display:none");
