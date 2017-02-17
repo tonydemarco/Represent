@@ -12,7 +12,12 @@ const DELAY = 1000;
 var score,
     scorediv,
     game_is_running = false,
+    game_mode = 'guess',
+    topo,
     intro,
+    learn,
+    guess,
+    buttons,
     icon,
     icon_img,
     result_correct,
@@ -41,7 +46,11 @@ var score,
 ];
 
 function init(){
+  topo = document.getElementById("topo");
   intro = document.getElementById("intro");
+  learn = document.getElementById("learn");
+  guess = document.getElementById("guess");
+  buttons = document.getElementById("buttons");
   icon = document.getElementById("icon");
   icon_img = document.getElementById("icon_img");
   result_correct = document.getElementById("result_correct");
@@ -53,7 +62,8 @@ function init(){
 
   download.setAttribute("style", "display:none");
 
-  intro.onclick = new_game;
+  guess.onclick = new_game;
+  learn.onclick = start_learn;
   var fb = document.getElementById("facebook").onclick = function(){ window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent")};
   var tw = document.getElementById("twitter").onclick = function () { window.open("http://twitter.com/share?text=An%20Awesome%20Link&url=http://www.justintype.com/represent")};
   download.onclick = function () { window.open("http://www.justintype.com.br/free/represent/RepresentSans-Regular.otf.zip")};
@@ -67,6 +77,7 @@ function init(){
 function new_game(){
   intro.setAttribute("style", "display:none");
   icon.setAttribute("style", "display:block");
+  buttons.setAttribute("style", "display:block");
 
   score = 0;
   random_icons = [];
@@ -78,8 +89,40 @@ function new_game(){
   }
   current_icon = -1;
 
+  game_mode = 'guess'
   game_is_running = true;
   display_next_icon();
+}
+
+// learn mode, labels simply change icon to corresponding one
+function start_learn() {
+  // hide intro
+  intro.setAttribute("style", "display:none");
+  // show icon and buttons
+  icon.setAttribute("style", "display:block");
+  buttons.setAttribute("style", "display:block");
+  // change header to arrow
+  topo.setAttribute("src", "images/SVG/topo_learn.svg");
+  topo.onclick = return_to_intro;
+
+  game_mode = 'learn'
+  game_is_running = true;
+}
+
+// end game, return to intro screen
+function return_to_intro() {
+  // hide intro
+  intro.setAttribute("style", "display:block");
+  // show icon and buttons
+  icon.setAttribute("style", "display:none");
+  buttons.setAttribute("style", "display:none");
+  // change header to arrow
+  topo.setAttribute("src", "images/SVG/topo.svg");
+  topo.onclick = null;
+  // reset icon
+  icon_img.setAttribute("src", "images/SVG/correct.svg");
+
+  game_is_running = false;
 }
 
 /**
@@ -98,19 +141,24 @@ function display_next_icon(){
 
 function answer(button){
   if (!game_is_running) return;
-
-  if (button.getAttribute("id") == random_icons[current_icon]){
-    correct_answer();
-  } else {
-    incorrect_answer();
+  var button_id = button.getAttribute("id")
+  if(game_mode == 'guess') {
+    if (button_id == random_icons[current_icon]){
+      correct_answer();
+    } else {
+      incorrect_answer();
+    }
+    next_round();
+  } else if(game_mode == 'learn') {
+    icon_img.setAttribute("src", "images/SVG/" + button_id + ".svg");
   }
-
-  next_round();
 }
 
 function game_over(){
   game_is_running = false;
+
   icon.setAttribute("style", "display:none");
+  buttons.setAttribute("style", "display:none");
   result_incorrect.setAttribute("style", "display:none");
   result_correct.setAttribute("style", "display:none");
   if (score != 15) {

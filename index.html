@@ -6,16 +6,18 @@
 
 <body onload="init()">
   <!-- Game Logo -->
-  <img src="images/SVG/topo.svg" alt="Represent logo">
+  <img id="topo" src="images/SVG/topo.svg" alt="Represent logo">
 
   <!-- Playfield:INTRO -->
-  <div id="intro" style="display:block" />
+  <div id="intro" style="display:block">
     <img src="images/SVG/intro.svg" />
+    <img id="learn" src="images/SVG/learn.svg" />
+    <img id="guess" src="images/SVG/guess.svg" />
   </div>
 
   <!-- Playfield:ICON -->
   <div id="icon" style="display:none">
-    <img id="icon_img" src="images/SVG/male.svg" />
+    <img id="icon_img" src="images/SVG/correct.svg" />
   </div>
 
   <!-- Playfield:RESULT IS CORRECT -->
@@ -39,7 +41,7 @@
   </div>
 
   <!-- Buttons -->
-  <div id="buttons" style="display:block">
+  <div id="buttons" style="display:none">
     <div>
       <img id="bisexual_female" src="images/SVG/B_bisexual_female.svg" onclick="answer(this)" />
       <img id="gay" src="images/SVG/B_gay.svg" onclick="answer(this)" />
