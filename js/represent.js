@@ -52,15 +52,8 @@ function init(){
   tryagain = document.getElementById("tryagain");
 
   download.setAttribute("style", "display:none");
-  tryagain.setAttribute("style", "display:none");
 
   intro.onclick = new_game;
-  scorediv.onclick = function(){
-    gameover.setAttribute("style", "display:none");
-    intro.setAttribute("style", "display:block");
-    download.setAttribute("style", "display:none");
-    tryagain.setAttribute("style", "display:none");
-  }
   var fb = document.getElementById("facebook").onclick = function(){ window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent")};
   var tw = document.getElementById("twitter").onclick = function () { window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent")};
   download.onclick = function () { window.open("http://www.justintype.com/free/represent/RepresentSans-Regular.otf.zip")};
@@ -68,7 +61,6 @@ function init(){
     gameover.setAttribute("style", "display:none");
     intro.setAttribute("style", "display:block");
     download.setAttribute("style", "display:none");
-    tryagain.setAttribute("style", "display:none");
   };
 }
 
@@ -127,7 +119,6 @@ function game_over(){
     scorediv.innerHTML = '<div><img src="images/SVG/result_15.svg" />';
     download.setAttribute("style", "display:block");
   }
-  tryagain.setAttribute("style", "display:block");
   gameover.setAttribute("style", "display:block");
 }
 
