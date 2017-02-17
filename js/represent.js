@@ -5,6 +5,7 @@ Copyright: Felipe C. da S. Sanches <juca@members.fsf.org>
            Tony de Marco <tony@garoa.tv>
            Afonso Coutinho <afonso@yack.com.br>
            Tamys Guimarães <tamys.guimaraes@gmail.com>
+           Erin Pinheiro Manal <erin.pinheiro@usp.br>
 */
 
 const DELAY = 1000;
