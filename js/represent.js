@@ -81,8 +81,8 @@ function init(){
 // resize body to fit aspect ratio
 function keep_aspect_ratio() {
   var body = document.body;
-  var original_height = screen.height;
-  var original_width = screen.width;
+  var original_height = window.innerHeight;
+  var original_width = window.innerWidth;
   if(original_width > original_height * (42/53)) {
     var height = original_height;
     var width = height * (42/53);
