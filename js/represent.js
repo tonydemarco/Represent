@@ -29,6 +29,7 @@ var score,
     tryagain,
     random_icons,
     share_msg,
+    share,
     icon_names = [
   "agender",
   "androgynous",
@@ -61,6 +62,8 @@ function init(){
   scorediv = document.getElementById("score");
   download = document.getElementById("download");
   tryagain = document.getElementById("tryagain");
+  share = document.getElementById("socialmedia");
+  share_msg = "How many symbols can you name?";
 
   download.setAttribute("style", "display:none");
 
@@ -69,11 +72,7 @@ function init(){
   var fb = document.getElementById("facebook").onclick = function(){ window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent&quote=" + share_msg)};
   var tw = document.getElementById("twitter").onclick = function () { window.open("http://twitter.com/share?url=http://www.justintype.com/represent&text=" + share_msg)};
   download.onclick = function () { window.open("http://www.justintype.com.br/free/represent/RepresentSans-Regular.otf.zip")};
-  tryagain.onclick = function () {
-    gameover.setAttribute("style", "display:none");
-    intro.setAttribute("style", "display:block");
-    download.setAttribute("style", "display:none");
-  };
+  tryagain.onclick = return_to_intro;
   window.onresize = keep_aspect_ratio;
   keep_aspect_ratio();
 }
@@ -95,6 +94,8 @@ function keep_aspect_ratio() {
 
 function new_game(){
   intro.setAttribute("style", "display:none");
+  share.setAttribute("style", "display:none");
+
   icon.setAttribute("style", "display:block");
   buttons.setAttribute("style", "display:block");
 
@@ -121,6 +122,7 @@ function new_game(){
 function start_learn() {
   // hide intro
   intro.setAttribute("style", "display:none");
+  share.setAttribute("style", "display:none");
   // show icon and buttons
   icon.setAttribute("style", "display:block");
   buttons.setAttribute("style", "display:block");
@@ -136,12 +138,15 @@ function start_learn() {
 function return_to_intro() {
   // show intro
   intro.setAttribute("style", "display:block");
+  share.setAttribute("style", "display:block");
+  share_msg = "How many symbols can you name?";
   // hide icon, result and buttons
   icon.setAttribute("style", "display:none");
   buttons.setAttribute("style", "display:none");
   result_correct.setAttribute("style", "display:none");
   result_incorrect.setAttribute("style", "display:none");
   gameover.setAttribute("style", "display:none");
+  download.setAttribute("style", "display:none");
   // hide header arrow
   topo.setAttribute("src", "images/SVG/topo.svg");
   topo.onclick = null;
@@ -196,6 +201,7 @@ function game_over(){
     download.setAttribute("style", "display:block");
   }
   gameover.setAttribute("style", "display:block");
+  share.setAttribute("style", "display:block");
 
   // reset icon
   icon_img.setAttribute("src", "images/SVG/correct.svg");
