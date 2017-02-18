@@ -134,12 +134,15 @@ function start_learn() {
 
 // end game, return to intro screen
 function return_to_intro() {
-  // hide intro
+  // show intro
   intro.setAttribute("style", "display:block");
-  // show icon and buttons
+  // hide icon, result and buttons
   icon.setAttribute("style", "display:none");
   buttons.setAttribute("style", "display:none");
-  // change header to arrow
+  result_correct.setAttribute("style", "display:none");
+  result_incorrect.setAttribute("style", "display:none");
+  gameover.setAttribute("style", "display:none");
+  // hide header arrow
   topo.setAttribute("src", "images/SVG/topo.svg");
   topo.onclick = null;
   // reset icon
@@ -203,13 +206,15 @@ function next_round(){
     window.setTimeout(game_over, DELAY);
   } else {
     // disabling the game and then re-enabling it prevents breakage due to fast clicking
-    game_is_running = false;
+    game_mode = false;
     display_next_icon();
     window.setTimeout(function(){
-      game_is_running = true;
-      result_correct.setAttribute("style", "display:none");
-      result_incorrect.setAttribute("style", "display:none");
-      icon.setAttribute("style", "display:block")
+      if(game_is_running) {
+        game_mode = "guess";
+        result_correct.setAttribute("style", "display:none");
+        result_incorrect.setAttribute("style", "display:none");
+        icon.setAttribute("style", "display:block");
+      }
     }, DELAY);
   }
 }
