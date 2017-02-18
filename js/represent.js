@@ -98,6 +98,10 @@ function new_game(){
   icon.setAttribute("style", "display:block");
   buttons.setAttribute("style", "display:block");
 
+  // change header to arrow
+  topo.setAttribute("src", "images/SVG/topo_learn.svg");
+  topo.onclick = return_to_intro;
+
   score = 0;
   random_icons = [];
   while (random_icons.length < icon_names.length){
