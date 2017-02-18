@@ -90,7 +90,7 @@ function keep_aspect_ratio() {
     var width = original_width;
     var height = width * (53/42);
   }
-  document.body.setAttribute("style", "width:"+width+";height:"+height);
+  document.body.setAttribute("style", "width:"+width+"px;height:"+height+"px");
 }
 
 function new_game(){
