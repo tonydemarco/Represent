@@ -73,6 +73,7 @@ function init(){
   var tw = document.getElementById("twitter").onclick = function () { window.open("http://twitter.com/share?url=http://www.justintype.com/represent&text=" + share_msg)};
   buy = document.getElementById("buy").onclick = function () { window.open("http://myfonts.us/td-qWury8")};
   download.onclick = function () { window.open("http://www.justintype.com.br/free/represent/FreeFont_Manual_Banners.zip")};
+  topo.onclick = go_to_justintype;
   tryagain.onclick = new_game;
   window.onresize = keep_aspect_ratio;
   keep_aspect_ratio();
@@ -156,11 +157,16 @@ function return_to_intro() {
   download.setAttribute("style", "display:none");
   // hide header arrow
   topo.setAttribute("src", "images/SVG/topo.svg");
-  topo.onclick = null;
+  topo.onclick = go_to_justintype;
   // reset icon
   icon_img.setAttribute("src", "images/SVG/correct.svg");
 
   game_is_running = false;
+}
+
+// go to justintype
+function go_to_justintype() {
+  window.open("http://www.justintype.com.br");
 }
 
 /**
