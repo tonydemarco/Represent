@@ -71,7 +71,7 @@ function init(){
   learn.onclick = start_learn;
   var fb = document.getElementById("facebook").onclick = function(){ window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent&quote=" + share_msg)};
   var tw = document.getElementById("twitter").onclick = function () { window.open("http://twitter.com/share?url=http://www.justintype.com/represent&text=" + share_msg)};
-  download.onclick = function () { window.open("http://www.justintype.com.br/free/represent/RepresentSans-Regular.otf.zip")};
+  download.onclick = function () { window.open("http://www.justintype.com.br/free/represent/FreeFont_Manual_Banners.zip")};
   tryagain.onclick = return_to_intro;
   window.onresize = keep_aspect_ratio;
   keep_aspect_ratio();
