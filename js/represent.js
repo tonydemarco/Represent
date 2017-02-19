@@ -71,8 +71,9 @@ function init(){
   learn.onclick = start_learn;
   var fb = document.getElementById("facebook").onclick = function(){ window.open("http://www.facebook.com/sharer.php?u=http://www.justintype.com/represent&quote=" + share_msg)};
   var tw = document.getElementById("twitter").onclick = function () { window.open("http://twitter.com/share?url=http://www.justintype.com/represent&text=" + share_msg)};
+  buy = document.getElementById("buy").onclick = function () { window.open("http://myfonts.us/td-qWury8")};
   download.onclick = function () { window.open("http://www.justintype.com.br/free/represent/FreeFont_Manual_Banners.zip")};
-  tryagain.onclick = return_to_intro;
+  tryagain.onclick = new_game;
   window.onresize = keep_aspect_ratio;
   keep_aspect_ratio();
 }
@@ -95,6 +96,12 @@ function keep_aspect_ratio() {
 function new_game(){
   intro.setAttribute("style", "display:none");
   share.setAttribute("style", "display:none");
+
+  // hide game over
+  result_correct.setAttribute("style", "display:none");
+  result_incorrect.setAttribute("style", "display:none");
+  gameover.setAttribute("style", "display:none");
+  download.setAttribute("style", "display:none");
 
   icon.setAttribute("style", "display:block");
   buttons.setAttribute("style", "display:block");
