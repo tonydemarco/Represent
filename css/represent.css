@@ -68,6 +68,9 @@ img {
   width: 36.25%;
 }
 
-.lightup:hover {
+.lightup:not(:focus):hover {
   background: rgb(112, 115, 116);
+}
+.lightup:focus {
+  background: none;
 }
